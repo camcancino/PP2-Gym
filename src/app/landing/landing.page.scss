@@ -1,0 +1,22 @@
+body {
+  background-image: url("/../assets/img/Fondo.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+div{
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.432);
+  text-align: center;
+}
+img{
+  margin-top: 100%;
+}
+section{
+  margin-top: 100px;
+}
