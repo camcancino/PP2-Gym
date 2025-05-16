@@ -13,3 +13,6 @@ Beneficios: optimización del tiempo, mejora la experiencia del socio y del entr
 El desarrollo se dividio en dos partes:
 - Frontend: Ionic, CSS, TypeScript.
 - Backend: TypeScript, NodeJS.
+
+Integrantes:
+Gustavo Guaimas, Leonardo Regueira, Nicolas Sanchez
