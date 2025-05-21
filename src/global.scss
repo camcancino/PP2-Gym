@@ -35,3 +35,45 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+////////////////////////////////////////////// COMIENZO DE S CSS GLOBAL! /////////////////////////////
+* {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+ion-content,
+ion-toolbar {
+    --background: none;
+    background-color: black;
+   
+    //text-align: center;
+
+    p,
+    h3,
+    h2 {
+        color: #F8F8Ff;
+        
+    }
+}
+ion-card-header,ion-card-content,ion-header,ion-toolbar{
+    text-align: center;
+    color: rgb(202, 73, 191);
+}
+
+ion-card {
+    --background: none;
+    background-color: #1e1f20;
+
+    ion-card-title {
+        color: #F8F8Ff;
+    }
+    ion-card-subtitle{
+        color: #F8F8Ff;
+    }
+}
+
+ion-list{
+    text-align: center;
+}

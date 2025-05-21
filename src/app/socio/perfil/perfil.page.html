@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Avatar del usuario -->
+  <div class="info">
+    <ion-avatar class="fotoPerfil">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" />
+    </ion-avatar>
+    <h2>Lucía García</h2>
+    <ion-note>Miembro desde: Enero 2023</ion-note>
+  </div>
+
+  <ion-list lines="full">
+    <ion-list-header>
+      <ion-label>Información Personal</ion-label>
+    </ion-list-header>
+    
+    <ion-item>
+      <ion-icon slot="start" name="person-outline"></ion-icon>
+      <ion-label position="stacked">Nombre Completo</ion-label>
+      <ion-input value="Lucía García Rodríguez" disabled></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon slot="start" name="id-card-outline"></ion-icon>
+      <ion-label position="stacked">DNI</ion-label>
+      <ion-input value="35.678.921" disabled></ion-input>
+    </ion-item>
+     
+    <ion-item>
+      <ion-icon slot="start" name="scale-outline"></ion-icon>
+      <ion-label position="stacked">Peso (Kg)</ion-label>
+      <ion-input value="68" disabled></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon slot="start" name="resize-outline"></ion-icon>
+      <ion-label position="stacked">Estatura (cm)</ion-label>
+      <ion-input value="165" disabled></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon slot="start" name="barbell-outline"></ion-icon>
+      <ion-label position="stacked">Experiencia Previa</ion-label>
+      <ion-select value="principiante" >
+        <ion-select-option value="ninguna">Ninguna</ion-select-option>
+        <ion-select-option value="principiante">Principiante (1-6 meses)</ion-select-option>
+        <ion-select-option value="intermedio">Intermedio (6 meses - 2 años)</ion-select-option>
+        <ion-select-option value="avanzado">Avanzado (+2 años)</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon slot="start" name="flag-outline"></ion-icon>
+      <ion-label position="stacked">Objetivo</ion-label>
+      <ion-select value="perder-peso" >
+        <ion-select-option value="perder-peso">Perder peso</ion-select-option>
+        <ion-select-option value="ganar-musculo">Ganar músculo</ion-select-option>
+        <ion-select-option value="salud">Mantenerse saludable</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon slot="start" name="fitness-outline"></ion-icon>
+      <ion-label position="stacked">Entrenador Asignado</ion-label>
+      <ion-select value="maria-lopez" disabled>
+        <ion-select-option value="juan-perez">Juan Pérez</ion-select-option>
+        <ion-select-option value="maria-lopez">María López</ion-select-option>
+        <ion-select-option value="carlos-gomez">Carlos Gómez</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" color="primary">
+      Guardar Cambios
+      </ion-button>
+     
+    </div>
+  </ion-list>
+
+ 
+</ion-content>
