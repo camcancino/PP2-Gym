@@ -1,1 +1,10 @@
-p{color:red}
+p{  color: rgb(202, 73, 191);}
+
+ion-list{
+    --background: none;
+    background-color: #1e1f20;
+    ion-item{
+        --background: none;
+        background-color: #1e1f20;
+    }
+}
