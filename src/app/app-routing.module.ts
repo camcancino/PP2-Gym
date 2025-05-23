@@ -17,7 +17,15 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./socio/tabs/tabs.module').then( m => m.TabsPageModule)
   },
-  
+  {
+    path: 'landing',
+    loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

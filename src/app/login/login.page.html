@@ -8,16 +8,25 @@
   <div>
     <p>Complete los siguientes campos para iniciar sesión</p>
   </div>
-  <form>
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
     <p>Correo electrónico:</p>
     <ion-item>
-      <ion-input type="email" placeholder="usuario123@gmail.com"></ion-input>
+      <ion-input 
+        type="email" 
+        placeholder="usuario123@gmail.com" 
+        formControlName="email">
+      </ion-input>
       <ion-icon name="mail-outline"></ion-icon>
     </ion-item>
 
     <p>Contraseña:</p>
     <ion-item>
-      <ion-input type="password" placeholder="************"></ion-input>
+      <ion-input 
+        type="password" 
+        placeholder="************" 
+        formControlName="password">
+      </ion-input>
       <ion-icon name="key-outline"></ion-icon>
     </ion-item>
 
@@ -29,15 +38,11 @@
       <p>¡No tengo cuenta! <a [routerLink]="['/signup']">Crear usuario ahora.</a></p>
     </div>
 
-    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 5%;">
-      <ion-fab-button [routerLink]="['/home']">
-        <ion-icon name="log-in-outline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+    <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</ion-button>
   </form>
 </ion-content>
 
-<ion-button expand="full" color="danger">
+<ion-button expand="full" color="danger" (click)="loginWithGoogle()">
   <ion-icon name="logo-google" slot="start"></ion-icon>
-  <P>Iniciar sesión con Google</P>
+  <p>Iniciar sesión con Google</p>
 </ion-button>
