@@ -4,18 +4,24 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./socio/tabs/tabs.module').then(m => m.TabsPageModule)
-    
+    redirectTo: 'landing',
+    pathMatch: 'full'
   },
   {
-    path: '',
-    loadChildren: () => import('./socio/home/home.module').then( m => m.HomePageModule) // es la pagina de inicio ' ' 
-    
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-  
   {
-    path: 'tabs',
-    loadChildren: () => import('./socio/tabs/tabs.module').then( m => m.TabsPageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'reset-password',
+    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
   },
   {
     path: 'landing',
@@ -25,12 +31,17 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
-
+  {
+    path: 'socio', // Parent path
+    loadChildren: () => import('./socio/tabs/tabs.module').then(m => m.TabsPageModule),
+   // canActivate: [AuthGuard] // proteje la ruta (necesitas logearte para acceder)
+  },
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
