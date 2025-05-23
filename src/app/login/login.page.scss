@@ -1,7 +1,4 @@
 ion-content {
-   --background: none; // Desactiva el fondo por defecto
-  background-image: url('../../assets/img/Fondo.jpg');
-  background-size: cover;                /* La imagen cubre todo el área */
-  background-repeat: no-repeat;          /* La imagen no se repite */
-  background-position: center;           /* La imagen se centra */
+  --background: none; // Desactiva el fondo por defecto
+  background-color: black;
 }
