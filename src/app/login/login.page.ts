@@ -37,7 +37,7 @@ async login() {
 
     if (email === 'admin@gmail.com') {
 
-      this.router.navigateByUrl('/admin');
+      this.router.navigateByUrl('/socio');
     } else {
       this.router.navigateByUrl('/home');
     }

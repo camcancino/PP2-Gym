@@ -26,11 +26,16 @@ const routes: Routes = [
   {
     path: 'landing',
     loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
-  },  {
+  },
+  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
-
+  {
+    path: 'socio', // Parent path
+    loadChildren: () => import('./socio/tabs/tabs.module').then(m => m.TabsPageModule),
+   // canActivate: [AuthGuard] // proteje la ruta (necesitas logearte para acceder)
+  },
 ];
 
 @NgModule({

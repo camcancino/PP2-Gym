@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Bienvenido</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,37 +8,36 @@
   <div>
     <p>Complete los siguientes campos para iniciar sesión</p>
   </div>
-
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
+  <form>
     <p>Correo electrónico:</p>
     <ion-item>
-      <ion-input 
-        type="email" 
-        placeholder="usuario123@gmail.com" 
-        formControlName="email">
-      </ion-input>
+      <ion-input type="email" placeholder="usuario123@gmail.com"></ion-input>
       <ion-icon name="mail-outline"></ion-icon>
     </ion-item>
 
     <p>Contraseña:</p>
     <ion-item>
-      <ion-input 
-        type="password" 
-        placeholder="************" 
-        formControlName="password">
-      </ion-input>
+      <ion-input type="password" placeholder="************"></ion-input>
       <ion-icon name="key-outline"></ion-icon>
     </ion-item>
 
     <div style="margin-top: 15px;">
       <a [routerLink]="['/reset-password']"> ¡Olvide mi Contraseña!</a>
     </div>
-
+    
     <div>
       <p>¡No tengo cuenta! <a [routerLink]="['/signup']">Crear usuario ahora.</a></p>
     </div>
 
-    <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</ion-button>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 5%;">
+      <ion-fab-button [routerLink]="['/home']">
+        <ion-icon name="log-in-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
   </form>
 </ion-content>
 
+<ion-button expand="full" color="danger">
+  <ion-icon name="logo-google" slot="start"></ion-icon>
+  <P>Iniciar sesión con Google</P>
+</ion-button>
