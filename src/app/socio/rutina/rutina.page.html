@@ -1,0 +1,119 @@
+<!-- routine.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Rutina</ion-title>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Workout Summary Card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Rutina Full Body</ion-card-title>
+      <ion-img
+  src="../../../assets/img/rutina.jpg"
+  alt="rutina"
+></ion-img>
+      <ion-card-subtitle>Principiante - Día 1</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-chip color="primary">5 ejercicios</ion-chip>
+      <ion-chip color="secondary">30-40 minutos</ion-chip>
+      <ion-chip color="tertiary">Dificultad: Media</ion-chip>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Exercise List -->
+  <ion-list lines="full">
+    <!-- Exercise 1 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img
+        src="../../../assets/img/sentadilla.jpg"
+        alt="rutina"
+      ></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Sentadillas</h2>
+        <p>3 series x 12 repeticiones</p>
+        <p>Descanso: 45 segundos</p>
+      </ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+
+    <!-- Exercise 2 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img
+        src="../../../assets/img/flexion.png"
+        alt="rutina"
+      ></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Flexiones</h2>
+        <p>3 series x 10 repeticiones</p>
+        <p>Descanso: 45 segundos</p>
+      </ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+
+    <!-- Exercise 3 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img
+        src="../../../assets/img/Dominada.png"
+        alt="rutina"
+      ></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Dominadas</h2>
+        <p>3 series x 8 repeticiones</p>
+        <p>Descanso: 60 segundos</p>
+      </ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+
+    <!-- Exercise 4 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img
+        src="../../../assets/img/plancha.jpg"
+        alt="rutina"
+      ></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Plancha</h2>
+        <p>3 series x 30 segundos</p>
+        <p>Descanso: 30 segundos</p>
+      </ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+
+    <!-- Exercise 5 -->
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img
+        src="../../../assets/img/zancada.jpg"
+        alt="rutina"
+      ></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Zancadas</h2>
+        <p>3 series x 10 repeticiones (cada pierna)</p>
+        <p>Descanso: 45 segundos</p>
+      </ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <!-- Start Workout Button -->
+  <div class="ion-padding">
+    <ion-button expand="block" color="primary" > 
+      
+      Finalizar Rutina
+    </ion-button>
+  </div>
+</ion-content>
+
+<!-- //(click)="startWorkout() -->

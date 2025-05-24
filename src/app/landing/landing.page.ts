@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 export class LandingPage {
 
 constructor(private router: Router) {
-    console.log('Redireccionando en 5 segundos a Login ');
+    console.log('Redireccionando en 3 segundos a Login ');
     
     setTimeout(() => {
       this.router.navigate(['./login']);
-    }, 5000);
+    }, 3000);
   }
 
 }

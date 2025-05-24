@@ -1,0 +1,14 @@
+ion-tab-bar {
+    --background: none;
+    background-color: black;
+    height: 45px;
+    --color:#F8F8Ff;           /* Unselected icon/label color */
+    --color-selected:rgb(202, 73, 191);  //color random
+    ion-tab-button{
+    padding-bottom: 5px;
+    }
+    ion-icon {
+        font-size: 20px;
+       
+    }
+}

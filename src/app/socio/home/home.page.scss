@@ -1,0 +1,68 @@
+// background-color: #1e1f20;
+.estadisticas {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+
+
+    .stat-item {
+
+        ion-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            margin: 5px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.8rem;
+
+        }
+    }
+}
+
+
+.fraseMotivacional {
+    h2 {
+        margin: 35px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        font-style: italic;
+
+    }
+}
+    
+.textoHome {
+    text-align: center;
+
+
+}
+
+
+
+.proximaRutina {
+
+
+    ion-button {
+        padding-top: 10px;
+    }
+
+}
+
+ion-card {
+    --background: none;
+    background-color: #1e1f20;
+
+    ion-card-title {
+        color: #F8F8Ff;
+    }
+}

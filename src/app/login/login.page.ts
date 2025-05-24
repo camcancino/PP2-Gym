@@ -9,7 +9,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-  standalone: false
+  standalone: false,
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
@@ -22,43 +22,40 @@ export class LoginPage implements OnInit {
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
     });
-    
   }
 
   ngOnInit() {}
 
-async login() {
-  const { email, password } = this.loginForm.value;
-  try {
-    await this.afAuth.signInWithEmailAndPassword(email, password);
+  async login() {
+    const { email, password } = this.loginForm.value;
+    try {
+      await this.afAuth.signInWithEmailAndPassword(email, password);
 
-
-    if (email === 'admin@gmail.com') {
-
-      this.router.navigateByUrl('/admin');
-    } else {
-      this.router.navigateByUrl('/home');
-    }
-
-  } catch (error) {
-    if (error instanceof Error) {
-      alert('Error al iniciar sesión: ' + error.message);
-    } else {
-      alert('Error al iniciar sesión: ' + JSON.stringify(error));
+      if (email === 'socio1@gmail.com') {
+        this.router.navigateByUrl('/socio');
+      } else {
+        this.router.navigateByUrl('/home');
+      }
+    } catch (error) {
+      if (error instanceof Error) {
+        alert('Error al iniciar sesión: ' + error.message);
+      } else {
+        alert('Error al iniciar sesión: ' + JSON.stringify(error));
+      }
     }
   }
-}
 
   async loginWithGoogle() {
     try {
-      const result = await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      const result = await this.afAuth.signInWithPopup(
+        new firebase.auth.GoogleAuthProvider()
+      );
       console.log('Usuario logueado:', result.user);
       this.router.navigateByUrl('/home');
     } catch (err) {
       console.error('Error al iniciar sesión con Google', err);
     }
   }
-  
 }
